@@ -2,9 +2,12 @@ $(document).ready(function(){
   var bubble = function(event){
     // console.log(event.clientX, event.clientY);
     var $b = $('<div/>').addClass('bubble');
+    var size = Math.random() * 4;
     $b.css({
       left: event.clientX,
-      top: event.clientY
+      top: event.clientY,
+      width: size + 'em',
+      height: size + 'em'
     });
     $('body').append($b);
     // clean up after ourselves
